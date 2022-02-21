@@ -38,6 +38,7 @@ sudo systemctl enable mongod
 ```
 
 # Configuration
+
 1. Open the config file.
 ```
 sudo nano /etc/mongod.conf
