@@ -124,7 +124,7 @@ defaults:
       content-type: post
   - scope:
       path: ""
-      type: notes
+      type: goodnotes
     values:
       layout: Post
       content-type: notes
