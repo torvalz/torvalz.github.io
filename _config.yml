@@ -124,9 +124,10 @@ defaults:
       content-type: post
   - scope:
       path: ""
-      type: goodnotes
+      type: notes
     values:
       layout: Post
+      permalink: /notes/:title
       content-type: notes
 
 
