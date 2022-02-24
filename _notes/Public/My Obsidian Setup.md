@@ -23,7 +23,7 @@ If you use CJK input method, you had better choose ```AppImage``` version of ```
 ## Todos
 - I should learn about popular plugins such as **Kanban**, **Templater**, and the like.
 
-# References
+## References
 [This video](https://www.youtube.com/watch?v=E6ySG7xYgjY&t=344s) inspired me to organize my notes in this way.
 
 ## Links
