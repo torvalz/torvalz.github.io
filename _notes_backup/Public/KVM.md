@@ -4,7 +4,7 @@ notetype : feed
 date : 22-02-2022
 ---
 
-[[MongoDB]]
+[[Install MongoDB 5.0 in Ubuntu]]
 
 ## Reference
 https://ubuntu.com/blog/kvm-hyphervisor

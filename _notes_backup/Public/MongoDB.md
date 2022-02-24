@@ -1,11 +1,13 @@
 ---
-title : MongoDB
+title : How to Install MongoDB 5.0 in Ubuntu
 notetype : feed
 date : 22-02-2022
 ---
+# Problem
+My `MongoDB Atlas` free tier does not allow for upload anymore because my data size reaches the limit. I have to transfer the DB to a Ubuntu based server.
 
 # Installation
-I am trying to install ```MongoDB``` on Ubuntu 20.04 LTS. The current stable version is 5.0, and I refer to [this tutorial](https://thishosting.rocks/install-mongodb-ubuntu/).
+I am trying to install `MongoDB` on `Ubuntu 20.04 LTS`. The latest stable version is 5.0, but `apt install` would not install the latest. So, I refer to [this tutorial](https://thishosting.rocks/install-mongodb-ubuntu/).
 
 ## Add the public key
 ```
@@ -17,17 +19,17 @@ wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add 
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
 ```
 
-## Update
+## Update package information
 ```
 sudo apt update
 ```
 
-## Install
+## Install MongoDB
 ```
 sudo apt-get install mongodb-org
 ```
 
-## Start the service
+## Start MongoDB service
 ```
 sudo service mongod start
 ```
@@ -45,6 +47,7 @@ sudo nano /etc/mongod.conf
 ```
 
 2. Add IPs to the file.
+The code below did not work for me.
 ```
 # network interfaces
 net:
@@ -52,21 +55,18 @@ net:
   bindIp: 127.0.0.1,your.mongodb.server.ip
 ```
 
-# Data Export
+# Data export from MongoDB Atlas
+I backed up the data saved on the `MongoDB Atlas` server to new Linux server. The command below will back up a collection into a file.
 ```
 mongoexport --uri mongodb+srv://<ID>:<PASSWORD>@<cluster0.rr0th.mongodb.net>/<DBNAME> --collection <COLLECTIONNAME> --out <PATHTOFILE>
 ```
 
-# Import Data
+# Import data
 ```
 mongoimport --db <DBNAME> --collection <COLLECTIONNAME> --file <PATHTOFILE>
 ```
 
-# Create User
+# Create user
 ```
 db.createUser({ user: 'tester', pwd: 'tester', roles: [{ role: 'userAdminAnyDatabase', db: 'admin' }] })
 ```
-
-
-
-

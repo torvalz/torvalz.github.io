@@ -12,7 +12,6 @@ title: Pop_OS! 20.04 LTS 설정
 - 가상 머신 설치
 
 
-
 - 
 - **[Node.js](https://nodejs.org/)** 설치
 - **Obsidian** 설치
