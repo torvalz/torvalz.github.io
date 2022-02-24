@@ -1,6 +1,7 @@
 ---
 title: My Obsidian Setup
-date: 22-02-2022
+date: 24-02-2022
+notetype: feed
 ---
 This note describes how I set up Obsidian on my ```Pop_OS! 20.04 LTS``` installed laptop.
 

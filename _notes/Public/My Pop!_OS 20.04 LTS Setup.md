@@ -1,6 +1,7 @@
 ---
-title: Configuration of Pop!_OS 20.04 LTS
-date: 22-02-2022
+title: My Pop!_OS 20.04 LTS Setup
+date: 24-02-2022
+notetype: feed
 ---
 This note is being written for my later use. I am taking notes, developing software, managing Linux servers, and studying linguistics.
 ## Plan Overview
